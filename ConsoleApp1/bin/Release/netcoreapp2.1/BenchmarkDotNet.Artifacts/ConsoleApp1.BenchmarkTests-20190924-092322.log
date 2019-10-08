@@ -1,0 +1,76 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// ***** Done, took 00:00:00 (0.4 sec)   *****
+// Found 2 benchmarks:
+//   BenchmarkTests.test1: DefaultJob
+//   BenchmarkTests.test2: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)// Generate Exception: async void is not supported by design
+// Build Error: Exception! 
+Message: async void is not supported by design,
+Stack trace:
+   at BenchmarkDotNet.Code.CodeGenerator.GetDeclarationsProvider(Descriptor descriptor)
+   at BenchmarkDotNet.Code.CodeGenerator.Generate(BuildPartition buildPartition)
+   at BenchmarkDotNet.Toolchains.GeneratorBase.GenerateCode(BuildPartition buildPartition, ArtifactsPaths artifactsPaths)
+   at BenchmarkDotNet.Toolchains.GeneratorBase.GenerateProject(BuildPartition buildPartition, ILogger logger, String rootArtifactsFolderPath)
+
+// Generate Exception: async void is not supported by design
+// Build Error: Exception! 
+Message: async void is not supported by design,
+Stack trace:
+   at BenchmarkDotNet.Code.CodeGenerator.GetDeclarationsProvider(Descriptor descriptor)
+   at BenchmarkDotNet.Code.CodeGenerator.Generate(BuildPartition buildPartition)
+   at BenchmarkDotNet.Toolchains.GeneratorBase.GenerateCode(BuildPartition buildPartition, ArtifactsPaths artifactsPaths)
+   at BenchmarkDotNet.Toolchains.GeneratorBase.GenerateProject(BuildPartition buildPartition, ILogger logger, String rootArtifactsFolderPath)
+
+Successfully reverted power plan (GUID: 381b4222-f694-41f0-9685-ff5bb260df2e FriendlyName: Balanced)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\ConsoleApp1.BenchmarkTests-report.csv
+  BenchmarkDotNet.Artifacts\results\ConsoleApp1.BenchmarkTests-report-github.md
+  BenchmarkDotNet.Artifacts\results\ConsoleApp1.BenchmarkTests-report.html
+
+// * Detailed results *
+BenchmarkTests.test1: DefaultJob
+Runtime = ; GC = 
+There are not any results runs
+
+BenchmarkTests.test2: DefaultJob
+Runtime = ; GC = 
+There are not any results runs
+
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=Windows 10.0.18362
+Intel Core i5-8250U CPU 1.60GHz (Kaby Lake R), 1 CPU, 8 logical and 4 physical cores
+.NET Core SDK=2.1.500
+  [Host] : .NET Core 2.1.6 (CoreCLR 4.6.27019.06, CoreFX 4.6.27019.05), 64bit RyuJIT  [AttachedDebugger]
+
+
+| Method | Mean | Error |
+|------- |-----:|------:|
+|  test1 |   NA |    NA |
+|  test2 |   NA |    NA |
+
+Benchmarks with issues:
+  BenchmarkTests.test1: DefaultJob
+  BenchmarkTests.test2: DefaultJob
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+
+// * Legends *
+  Mean  : Arithmetic mean of all measurements
+  Error : Half of 99.9% confidence interval
+  1 ns  : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:01 (1.06 sec), executed benchmarks: 0
+
+Global total time: 00:00:01 (1.49 sec), executed benchmarks: 0
+// * Artifacts cleanup *

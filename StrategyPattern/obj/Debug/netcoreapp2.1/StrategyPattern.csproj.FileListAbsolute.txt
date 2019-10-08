@@ -1,0 +1,11 @@
+C:\Users\Neringa\source\repos\StrategyPattern\StrategyPattern\bin\Debug\netcoreapp2.1\StrategyPattern.deps.json
+C:\Users\Neringa\source\repos\StrategyPattern\StrategyPattern\bin\Debug\netcoreapp2.1\StrategyPattern.runtimeconfig.json
+C:\Users\Neringa\source\repos\StrategyPattern\StrategyPattern\bin\Debug\netcoreapp2.1\StrategyPattern.runtimeconfig.dev.json
+C:\Users\Neringa\source\repos\StrategyPattern\StrategyPattern\bin\Debug\netcoreapp2.1\StrategyPattern.dll
+C:\Users\Neringa\source\repos\StrategyPattern\StrategyPattern\bin\Debug\netcoreapp2.1\StrategyPattern.pdb
+C:\Users\Neringa\source\repos\StrategyPattern\StrategyPattern\obj\Debug\netcoreapp2.1\StrategyPattern.csprojAssemblyReference.cache
+C:\Users\Neringa\source\repos\StrategyPattern\StrategyPattern\obj\Debug\netcoreapp2.1\StrategyPattern.csproj.CoreCompileInputs.cache
+C:\Users\Neringa\source\repos\StrategyPattern\StrategyPattern\obj\Debug\netcoreapp2.1\StrategyPattern.AssemblyInfoInputs.cache
+C:\Users\Neringa\source\repos\StrategyPattern\StrategyPattern\obj\Debug\netcoreapp2.1\StrategyPattern.AssemblyInfo.cs
+C:\Users\Neringa\source\repos\StrategyPattern\StrategyPattern\obj\Debug\netcoreapp2.1\StrategyPattern.dll
+C:\Users\Neringa\source\repos\StrategyPattern\StrategyPattern\obj\Debug\netcoreapp2.1\StrategyPattern.pdb

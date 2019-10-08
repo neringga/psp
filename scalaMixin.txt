@@ -1,0 +1,117 @@
+trait BasePerformance {
+  def ShowYesterdayLinesOfCode(lines: Int) = println(s"Yesterday's lines of code count: $lines")
+  def ShowPreviousMonthCommitCount(commitCount: Int) = println(s"Previous month commit count: $commitCount")
+  def Valuable = println("Valuable employee")
+  def NotValuable = println("Not valuable employee")
+}
+
+trait PoorPerformance extends BasePerformance {
+  protected def ShowYesterdayLinesOfCode = super.ShowYesterdayLinesOfCode(10)
+  protected def ShowPreviousMonthCommitCount = super.ShowPreviousMonthCommitCount(5)
+  protected def ShowIfValuable = super.NotValuable
+}
+
+trait GoodPerformance extends BasePerformance {
+  protected def ShowYesterdayLinesOfCode = super.ShowYesterdayLinesOfCode(20)
+  protected def ShowPreviousMonthCommitCount = super.ShowPreviousMonthCommitCount(10)
+  protected def ShowIfValuable = super.Valuable
+}
+
+trait BestPerformance extends BasePerformance {
+  protected def ShowYesterdayLinesOfCode = super.ShowYesterdayLinesOfCode(30)
+  protected def ShowPreviousMonthCommitCount = super.ShowYesterdayLinesOfCode(15)
+  protected def ShowIfValuable = super.Valuable
+}
+
+trait JuniorPayment {
+  val bonus = 100
+  
+  protected def ShowMonthlySalary(month: Int) = {
+    val isBonusMonth = month % 6 == 0
+    val monthSalary = if(isBonusMonth) 700 + bonus else 700
+    println(s"Junior $month salary: $monthSalary")
+  }
+  protected def ShowAnnualSalary = println("Junior annual salary: 9000")
+  protected def ShowBonus = println(s"Junior bonus: $bonus")
+}
+
+trait MidPayment {
+  val bonus = 150
+  
+  protected def ShowMonthlySalary(month: Int) = {
+    val isBonusMonth = month % 4 == 0
+    val monthSalary = if(isBonusMonth) 1300 + bonus else 1300
+    println(s"Mid $month salary: $monthSalary")
+  }
+  protected def ShowAnnualSalary = println("Mid annual salary: 12000")
+  protected def ShowBonus = println(s"Mid bonus: $bonus")
+}
+
+trait SeniorPayment { 
+    val bonus = 200
+  
+  protected def ShowMonthlySalary(month: Int) = {
+    val isBonusMonth = month % 3 == 0
+    val monthSalary = if(isBonusMonth) 1800 + bonus else 1800
+    println(s"Senior $month salary: $monthSalary")
+  }
+  protected def ShowAnnualSalary = println("Senior annual salary: 24000")
+  protected def ShowBonus = println(s"Senior bonus: $bonus")
+}
+
+abstract class FullStackDeveloper {
+  protected def ShowMonthlySalary(month: Int)
+  protected def ShowAnnualSalary
+  protected def ShowBonus
+  protected def ShowYesterdayLinesOfCode
+  protected def ShowPreviousMonthCommitCount
+  protected def ShowIfValuable
+
+  def Salary(month: Int = 0) {
+    if (month != 0) {
+      ShowMonthlySalary(month)
+    }
+    ShowAnnualSalary
+    ShowBonus
+  }
+
+  def Performance {
+    ShowYesterdayLinesOfCode
+    ShowPreviousMonthCommitCount
+    ShowIfValuable
+  }
+}
+
+abstract class HumanResourcesManager {
+  protected def ShowMonthlySalary(month: Int)
+  protected def ShowAnnualSalary
+  protected def ShowBonus
+  
+  def Salary(month: Int = 0) {
+    if (month != 0) {
+      ShowMonthlySalary(month)
+    }
+    ShowAnnualSalary
+    ShowBonus
+  }
+}
+
+object Main {
+
+  def main(args: Array[String]) {
+    val juniorDevWithPoorPerformance = new FullStackDeveloper with PoorPerformance with JuniorPayment
+    juniorDevWithPoorPerformance.Salary()
+    juniorDevWithPoorPerformance.Performance
+    
+    val midDevWithGoodPerformance = new FullStackDeveloper with GoodPerformance with MidPayment
+    midDevWithGoodPerformance.Salary(1)
+    midDevWithGoodPerformance.Performance
+    
+    val seniorDevWithBestPerformance = new FullStackDeveloper with BestPerformance with SeniorPayment
+    seniorDevWithBestPerformance.Salary(4)
+    seniorDevWithBestPerformance.Performance
+    
+    var midHr = new HumanResourcesManager with MidPayment
+    midHr.Salary(7)
+  }
+}

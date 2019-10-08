@@ -1,0 +1,79 @@
+interface IBrake {
+    fun stop()
+    fun slowDown()
+}
+
+interface IHorn {
+    fun beep()
+}
+
+interface IWheel {
+    val side: String
+    fun turn()
+}
+
+interface IPlane {
+    fun fly()
+}
+
+class Brake() : IBrake {
+    override fun stop() {
+        println("Stopped")
+    }
+    
+    override fun slowDown() {
+        println("Slow downed")
+    }
+}
+
+class Plane(): IPlane {
+    override fun fly() {
+        println("Plane is flying")
+	}
+}
+
+class Horn() : IHorn {
+    override fun beep() {
+		println("Beeeeep")
+    }
+}
+
+class Wheel(val turnSide: String) : IWheel {
+    override val side: String = turnSide
+    override fun turn() {
+        println("Wheel turned $side")
+    }
+}
+
+class Car(wheel: IWheel, brake: IBrake, horn: IHorn) : IWheel by wheel, IHorn by horn, IBrake by brake
+class CoolPlane(plane: IPlane, wheel: IWheel, brake: IBrake) : IPlane by plane, IWheel by wheel, IBrake by brake
+class Boat(wheel: IWheel, brake: IBrake, horn: IHorn) : IWheel by wheel, IHorn by horn, IBrake by brake
+
+fun main(args: Array<String>) {
+    var wheelRight = Wheel("right")
+    var wheelLeft = Wheel("left")
+    var brake = Brake()
+    var horn = Horn()
+    var plane = Plane()
+    
+    var car = Car(wheelRight, brake, horn)
+    var boat = Boat(wheelRight, brake, horn)
+    var coolPlane = CoolPlane(plane, wheelLeft, brake)
+    
+    println("Car")
+    car.beep()
+    car.stop()
+    
+    println("Boat")
+    boat.turn()
+    boat.slowDown()
+    
+    println("Cool Plane")
+    coolPlane.turn()
+    
+    println("Simple Plane")
+    plane.fly()
+    
+    
+    
+}

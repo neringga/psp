@@ -1,0 +1,41 @@
+trait Wheel {
+  def turn(side: String) = println(s"Wheel turned $side")
+}
+
+trait Brake {
+  def stop = println("Stopped")
+  def slowDown = println("Slow downed")
+}
+
+trait Horn {
+  def beep = println("Beeeeep")
+}
+
+class Car {
+  def drive = println("Car is driving")
+}
+
+class Boat {
+  def swim = println("Boat is swimming")
+}
+
+class Plane {
+  def fly = println("Plane is flying")
+}
+
+object Main {
+  def main(args: Array[String]) = {
+    val plane = new Plane with Wheel with Brake
+    plane.fly
+    plane.stop
+    
+    val car = new Car with Wheel with Brake with Horn
+    car.drive
+    car.turn("right")
+    
+    var boat = new Boat with Wheel with Brake with Horn
+    boat.swim
+    boat.beep
+  }
+}
+

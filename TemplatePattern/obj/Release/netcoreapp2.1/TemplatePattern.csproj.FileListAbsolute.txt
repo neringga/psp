@@ -1,0 +1,11 @@
+C:\Users\Neringa\source\repos\StrategyPattern\TemplatePattern\bin\Release\netcoreapp2.1\TemplatePattern.deps.json
+C:\Users\Neringa\source\repos\StrategyPattern\TemplatePattern\bin\Release\netcoreapp2.1\TemplatePattern.runtimeconfig.json
+C:\Users\Neringa\source\repos\StrategyPattern\TemplatePattern\bin\Release\netcoreapp2.1\TemplatePattern.runtimeconfig.dev.json
+C:\Users\Neringa\source\repos\StrategyPattern\TemplatePattern\bin\Release\netcoreapp2.1\TemplatePattern.dll
+C:\Users\Neringa\source\repos\StrategyPattern\TemplatePattern\bin\Release\netcoreapp2.1\TemplatePattern.pdb
+C:\Users\Neringa\source\repos\StrategyPattern\TemplatePattern\obj\Release\netcoreapp2.1\TemplatePattern.csprojAssemblyReference.cache
+C:\Users\Neringa\source\repos\StrategyPattern\TemplatePattern\obj\Release\netcoreapp2.1\TemplatePattern.csproj.CoreCompileInputs.cache
+C:\Users\Neringa\source\repos\StrategyPattern\TemplatePattern\obj\Release\netcoreapp2.1\TemplatePattern.AssemblyInfoInputs.cache
+C:\Users\Neringa\source\repos\StrategyPattern\TemplatePattern\obj\Release\netcoreapp2.1\TemplatePattern.AssemblyInfo.cs
+C:\Users\Neringa\source\repos\StrategyPattern\TemplatePattern\obj\Release\netcoreapp2.1\TemplatePattern.dll
+C:\Users\Neringa\source\repos\StrategyPattern\TemplatePattern\obj\Release\netcoreapp2.1\TemplatePattern.pdb
